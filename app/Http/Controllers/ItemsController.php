@@ -46,7 +46,7 @@ use App\Http\Controllers\Controller;
     {
       $item = Item::find($id);
       $want_users = $item->want_users;
-      $have_users = $item->have users;
+      $have_users = $item->have_users;
 
       return view('items.show', [
           'item' => $item,
