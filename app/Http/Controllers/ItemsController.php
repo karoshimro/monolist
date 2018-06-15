@@ -15,7 +15,7 @@ use App\Http\Controllers\Controller;
         $keyword = request()->keyword;
         $items = [];
         if ($keyword) {
-            $client = new RakutenRws_Client();
+            $client = new \RakutenRws_Client();
             $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
 
             $rws_response = $client->execute('IchibaItemSearch', [
